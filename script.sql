@@ -104,8 +104,8 @@ CREATE TABLE calendario (
 CREATE TABLE despesa (
     iddespesa INT NOT NULL,
     data_hora DATETIME NULL,
-	link VARCHAR(100) NULL,
-	email VARCHAR(100) NULL,
+    link VARCHAR(100) NULL,
+    email VARCHAR(100) NULL,
     arquivo VARCHAR(100) NULL,
     viagem_idViagem INT NOT NULL,
     tipodespesa_idtipodespesa INT NOT NULL,
@@ -114,24 +114,24 @@ CREATE TABLE despesa (
      
 CREATE TABLE tipodespesa (
     idtipodespesa INT NOT NULL,
-	Descricao VARCHAR(100) NULL,
+    Descricao VARCHAR(100) NULL,
     PRIMARY KEY (idtipodespesa)
      );
      
 CREATE TABLE necessidade (
     idnecessidade INT NOT NULL,
-	Descricao VARCHAR(100) NULL,
+    Descricao VARCHAR(100) NULL,
     PRIMARY KEY (idnecessidade)
      );     
      
 CREATE TABLE necessidade_has_pessoa (
-	necessidade_idnecessidade INT NOT NULL,
+    necessidade_idnecessidade INT NOT NULL,
     pessoa_idPessoa INT NOT NULL,
     PRIMARY KEY (necessidade_idnecessidade, pessoa_idPessoa)
      );   
      
 CREATE TABLE necessidade_has_pontos_turisticos (
-	necessidade_idnecessidade INT NOT NULL,
+    necessidade_idnecessidade INT NOT NULL,
     pessoa_turisticos_idpontos INT NOT NULL,
     PRIMARY KEY (necessidade_idnecessidade, pessoa_turisticos_idpontos)
      );   
