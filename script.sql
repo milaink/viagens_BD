@@ -22,8 +22,8 @@ CREATE TABLE telefone_pessoa (
 CREATE TABLE viagem (
     idViagem INT NOT NULL,
     nome VARCHAR(45) NULL,
-    data_inicial datetime(6) NOT NULL,
-    data_final datetime(6) NOT NULL,
+    data_inicial date NOT NULL,
+    data_final date NOT NULL,
     PRIMARY KEY (idViagem)
      );
      
@@ -61,8 +61,8 @@ CREATE TABLE telefone_ponto (
 CREATE TABLE calendario (
     idCalendario INT NOT NULL,
     descricao VARCHAR(100) NULL,
-    data_inicial DATETIME NULL,
-    data_final DATETIME NULL,
+    data_inicial DATE NULL,
+    data_final DATE NULL,
     viagem_idViagem INT NOT NULL,
     pontos_turisticos_idPontos INT NOT NULL,
     PRIMARY KEY (idCalendario)
@@ -134,5 +134,3 @@ ADD FOREIGN KEY (pessoa_idPessoa) REFERENCES pessoa(idPessoa);
 ALTER TABLE necessidade_has_pontos_turisticos
 ADD FOREIGN KEY (necessidade_idNecessidade) REFERENCES necessidade(idNecessidade),
 ADD FOREIGN KEY (pessoa_turisticos_idPontos) REFERENCES pontos_turisticos(idPontos);
-
-
