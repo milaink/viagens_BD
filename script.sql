@@ -1,6 +1,6 @@
 CREATE SCHEMA `agencia` ;
 
-Use agencia2;
+Use agencia;
 
 ALTER TABLE pessoa
 ADD FOREIGN KEY (viagem_idViagem) REFERENCES viagem(idViagem);
