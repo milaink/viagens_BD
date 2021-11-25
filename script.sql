@@ -3,9 +3,9 @@ CREATE SCHEMA `agencia` ;
 Use agencia;
 
 CREATE TABLE pessoa(
-    idPessoa INT NOT NULL,
+    idPessoa INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(100) NOT NULL,
-    sexo VARCHAR(45) NULL,
+    sexo enum('M','F') NULL,
     data_nascimento date NULL,
     endereco VARCHAR(45) NULL,
     email VARCHAR(45) NULL,
@@ -20,7 +20,7 @@ CREATE TABLE telefone_pessoa (
      );
     
 CREATE TABLE viagem (
-    idViagem INT NOT NULL,
+    idViagem INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(45) NULL,
     data_inicial date NOT NULL,
     data_final date NOT NULL,
@@ -28,14 +28,14 @@ CREATE TABLE viagem (
      );
      
 CREATE TABLE local (
-    idLocal INT NOT NULL,
+    idLocal INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
     viagem_idViagem INT NOT NULL,
     PRIMARY KEY (idLocal)
      );
      
 CREATE TABLE pontos_turisticos (
-    idPontos INT NOT NULL,
+    idPontos INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
     horario VARCHAR(45) NULL,
     custo DECIMAL(8,2) NULL,
@@ -46,7 +46,7 @@ CREATE TABLE pontos_turisticos (
      );
      
 CREATE TABLE tipo_pontos (
-    idTipo INT NOT NULL,
+    idTipo INT NOT NULL AUTO_INCREMENT,
     descricao VARCHAR(45) NOT NULL,
     PRIMARY KEY (idTipo)
      );
@@ -59,7 +59,7 @@ CREATE TABLE telefone_ponto (
      );
    
 CREATE TABLE calendario (
-    idCalendario INT NOT NULL,
+    idCalendario INT NOT NULL AUTO_INCREMENT,
     descricao VARCHAR(100) NULL,
     data_inicial DATE NULL,
     data_final DATE NULL,
@@ -69,24 +69,24 @@ CREATE TABLE calendario (
      );
      
 CREATE TABLE despesa (
-    idDespesa INT NOT NULL,
+    idDespesa INT NOT NULL AUTO_INCREMENT,
     data_hora DATETIME NULL,
     link VARCHAR(100) NULL,
     email VARCHAR(100) NULL,
-    arquivo VARCHAR(100) NULL,
+    local_armazenar VARCHAR(100) NULL,
     viagem_idViagem INT NOT NULL,
     tipo_despesa_idTipo INT NOT NULL,
     PRIMARY KEY (idDespesa)
      );
      
 CREATE TABLE tipo_despesa (
-    idTipo INT NOT NULL,
+    idTipo INT NOT NULL AUTO_INCREMENT,
     descricao VARCHAR(100) NULL,
     PRIMARY KEY (idTipo)
      );
      
 CREATE TABLE necessidade (
-    idNecessidade INT NOT NULL,
+    idNecessidade INT NOT NULL AUTO_INCREMENT,
     descricao VARCHAR(100) NULL,
     PRIMARY KEY (idNecessidade)
      );     
