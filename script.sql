@@ -74,6 +74,7 @@ CREATE TABLE despesa (
     link VARCHAR(100) NULL,
     email VARCHAR(100) NULL,
     local_armazenar VARCHAR(100) NULL,
+    custo DECIMAL (6,2) NULL,
     id_viagem INT NOT NULL,
     id_tipo_despesa INT NOT NULL,
     PRIMARY KEY (id_despesa)
@@ -134,3 +135,7 @@ ADD FOREIGN KEY (id_pessoa) REFERENCES pessoa(id_pessoa);
 ALTER TABLE necessidade_has_pontos_turisticos
 ADD FOREIGN KEY (id_necessidade) REFERENCES necessidade(id_necessidade),
 ADD FOREIGN KEY (id_pontos) REFERENCES pontos_turisticos(id_pontos);
+
+ALTER TABLE pessoa
+ADD FOREIGN KEY (id_viagem) REFERENCES viagem(id_viagem),
+AUTO_INCREMENT=1000;
