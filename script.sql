@@ -38,8 +38,8 @@ CREATE TABLE pontos_turisticos (
     id_pontos INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(45) NOT NULL,
     horario VARCHAR(45) NULL,
-    custo DECIMAL(8,2) NULL,
-    faixa INT NULL, 
+    custo VARCHAR(45) NULL,
+    faixa VARCHAR(45) NULL, 
     id_tipo_pontos INT NOT NULL,
     id_local INT NOT NULL,
     PRIMARY KEY (id_pontos)
