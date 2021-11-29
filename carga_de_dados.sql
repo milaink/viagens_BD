@@ -2,41 +2,46 @@ Use agencia;
 
 INSERT INTO viagem 
 VALUES
-	('1','Natal no Sul','2020-12-25','2021-01-24'),
-	('2','Férias 2021','2021-07-01','2021-07-07'),
-	('3','Viagem a Grandes Cidades','2021-09-05','2021-09-12');
-      
+    ('1','Natal no Sul','2020-12-25','2021-01-24'),
+    ('2','Férias 2021','2021-07-01','2021-07-07'),
+    ('3','Viagem a Grandes Cidades','2021-09-05','2021-09-12');
+  
+  
  INSERT INTO pessoa 
  VALUES
     ('1','Vitória Ribeiro.', 'F','1958-08-08','Rua Paulo Lacerda 1587', 'vitoriaferreira@hotmail.com','1'),
     ('2','Miriam Seng', 'F','1990-09-03','1804 Sycamore Street', 'miriamcseng@teleworm.us','1'),
-	('3','Kauan Fernandes', 'M','1989-10-25','Travessa Parapitinga 389', 'kauanmartins@hotmail.com','2'),
+    ('3','Kauan Fernandes', 'M','1989-10-25','Travessa Parapitinga 389', 'kauanmartins@hotmail.com','2'),
     ('4','Nicole Castro', 'F','1996-07-31','Rua Quinze-A 1531', 'nicolesouzacastro@hotmail.com','2'),
     ('5','Eduardo Pereira', 'M','1999-08-15','Rodovia BR-104 27', 'eduardo@hotmail.com','2');  
+    
     
 INSERT INTO telefone_pessoa
 VALUES
     ('1','(81) 9222-7971'),
-    ('2','(27) 6647-8954'),
-	('3','(14) 7602-3292'),
+    ('2','(27) 6647-8954'), 
+    ('3','(14) 7602-3292'),
     ('4','(11) 3438-8090'),
     ('5','(81) 9042-3550');
+    
     
 INSERT INTO local 
 VALUES
     ('1','Gramado','1'),
     ('2','Fortaleza','2'),
     ('3','Canoa Quebrada','2'),
-	('4','Jericoacoara','2'),
+    ('4','Jericoacoara','2'),
     ('5','São Paulo','3'),
     ('6','Rio de Janeiro','3');
-    
+   
+   
 INSERT INTO tipo_pontos (`id_tipo_pontos`,`descricao`)
 VALUES
     ('1','Restaurante'),
     ('2','Monumento'),
     ('3','Boate'),
-	('4','Parque');
+    ('4','Parque');
+    
     
 INSERT INTO pontos_turisticos
 VALUES
@@ -48,7 +53,7 @@ VALUES
     ('6', 'Estatua de Iracema','24h','gratuito', 'livre','2','2'),
     ('7', 'Chop do Bexiga','22:00 - 03:00','R$ 30 - R$ 120', '18 anos','3','2'),
     ('8', 'Parque do Cocó','24h','gratuito', 'livre','4','2'),
-   	('9', 'O Nain','11:00 - 17:00','R$ 50 - R$ 300', 'livre','1','3'),
+    ('9', 'O Nain','11:00 - 17:00','R$ 50 - R$ 300', 'livre','1','3'),
     ('10', 'Arco de Canoa Quebrada','24h','gratuito', 'livre','2','3'),
     ('11', 'The Beat','22:00 - 03:00','R$ 15 - R$ 120', '18 anos','3','3'),
     ('12', 'Duna do Pôr-do-Sol','24h','gratuito', 'livre','4','3'), 
@@ -65,9 +70,10 @@ VALUES
     ('23', 'Banana Jack','22:00 - 03:00','R$ 50 - R$ 320', '18 anos','3','6'),
     ('24', 'Parque Lage','24h','gratuito', 'livre','4','6');  
     
+    
 INSERT INTO telefone_ponto
 VALUES
-	('1', '(19) 6058-7867'),
+    ('1', '(19) 6058-7867'),
     ('2', '(88) 2642-2146'),
     ('3', '(85) 3439-4582'),
     ('4', '(85) 3541-1224'),
@@ -75,7 +81,7 @@ VALUES
     ('6', '(85) 2525-9475'),
     ('7', '(88) 3451-9153'),
     ('8', '(88) 2578-8492'),
-   	('9', '(88) 2612-2475'),
+    ('9', '(88) 2612-2475'),
     ('10', '(85) 3512-7584'),
     ('11', '(88) 2585-9615'),
     ('12', '(88) 3867-4437'), 
@@ -92,41 +98,45 @@ VALUES
     ('23', '(88) 3529-9870'),
     ('24', '(88) 3071-0328');  
     
+    
 INSERT INTO necessidade
 VALUES
     ('1', 'Rampas'),
-	('2', 'Banheiro Especial'),
-	('3', 'Barras de Apoio'),
+    ('2', 'Banheiro Especial'),
+    ('3', 'Barras de Apoio'),
     ('4', 'Piso Antiderrapante');
+    
     
 INSERT INTO tipo_despesa
 VALUES
     ('1', 'Passagem'),
-	('2', 'Hospedagem'),
-	('3', 'Alimentação'),
+    ('2', 'Hospedagem'),
+    ('3', 'Alimentação'),
     ('4', 'Aluguel de Carro'),
     ('5', 'Ingresso');
+    
     
 INSERT INTO despesa
 VALUES
     ('1', '2020-12-27','https://www.thefork.com.br/','thefork@gmail.com','celular','1800.89','1','3'),
     ('2', '2020-10-16','https://www.latamairlines.com/','contactlatam@latam.com','celular','1256.00','1','1'),
     ('3', '2020-10-16','https://www.gramadoparkshoteis.com','reservas.bellagramado@gramadoparks.com','computador','1500.00','1','2'),
-	('4', '2020-12-23','https://www.rentalcars.com/','rentalcars@gmail.com','computador','400.00','1','4'),
+    ('4', '2020-12-23','https://www.rentalcars.com/','rentalcars@gmail.com','computador','400.00','1','4'),
     ('5', '2020-11-05','https://www.gramadosuaviagem.com.br/','atendimento@gramadosuaviagem.com.br','celular','480.00','1','5'),
     ('6', '2021-05-01','https://www.thefork.com.br/','thefork@gmail.com','celular','2528.49','2','3'),
     ('7', '2020-05-25','https://www.latamairlines.com/','contactlatam@latam.com','celular','2586.00','2','1'),
     ('8', '2020-05-25','https://www.hoteis.com/','hoteis@hoteis.com','computador','1500.00','2','2'),
-	('9', '2020-07-01','https://www.rentalcars.com/','rentalcars@gmail.com','computador','800.00','2','4'),
+    ('9', '2020-07-01','https://www.rentalcars.com/','rentalcars@gmail.com','computador','800.00','2','4'),
     ('10', '2020-07-02','https://www.ingresso.com/','ingresso@gmail.com','celular','980.00','2','5'),
     ('11', '2021-09-05','https://www.thefork.com.br/','thefork@gmail.com','celular','800.90','3','3'),
     ('12', '2020-08-15','https://www.latamairlines.com/','contactlatam@latam.com','celular','1200.69','3','1'),
     ('13', '2020-07-26','https://www.hoteis.com/','hoteis@hoteis.com','computador','960.00','3','2'),
-	('14', '2020-09-06','https://www.rentalcars.com/','rentalcars@gmail.com','computador','250.00','3','4'),
+    ('14', '2020-09-06','https://www.rentalcars.com/','rentalcars@gmail.com','computador','250.00','3','4'),
     ('15', '2020-08-26','https://www.ingresso.com/','ingresso@gmail.com','celular','150.00','3','5');
     
-    INSERT INTO calendario
-	VALUES
+    
+INSERT INTO calendario
+VALUES
     ('1', 'Jantar Top','2021-07-01','2021-07-01','2','5'),
     ('2', 'Visitando a Praia','2021-07-02','2021-07-02','2','6'),
     ('3', 'Noite no Bar','2021-07-02','2021-07-03','2','7'),
@@ -137,21 +147,44 @@ VALUES
     ('8', 'Balada na Praia','2021-07-04','2021-07-05','2','11'),
     ('9', 'Almoço a Beira-Mar','2021-07-03','2021-07-03','2','9'),
     ('10', 'Jericoacoara','2021-07-03','2021-07-04','2','23'),
-	('11', 'Por-do-Sol em Jeri','2021-07-05','2021-07-05','2','16'),
-	('12', 'Comidinhas','2021-07-06','2021-07-06','2','13'),
+    ('11', 'Por-do-Sol em Jeri','2021-07-05','2021-07-05','2','16'),
+    ('12', 'Comidinhas','2021-07-06','2021-07-06','2','13'),
     ('13', 'Última Balada','2021-07-06','2021-07-07','2','15');
     
-	INSERT INTO necessidade_has_pessoa
-	VALUES
-	('1','3'),
+    
+INSERT INTO necessidade_has_pessoa
+VALUES
+    ('1','3'),
     ('1','4'),
-	('2','3'),
+    ('2','3'),
     ('2','4'),
-    ('4','5'),
     ('3','3'),
     ('3','1'),
-	('4','2'),
-    ('1','4'),
-    ('4','5');
+    ('4','2');
     
     
+INSERT INTO necessidade_has_pontos_turisticos
+VALUES
+    ('1','1'),
+    ('1','2'),
+    ('2','3'),
+    ('3','14'),
+    ('3','6'),
+    ('4','7'),
+    ('4','1'),
+    ('1','9'),
+    ('1','8'),
+    ('2','9'),
+    ('2','17'),
+    ('3','5'),
+    ('3','23'),
+    ('4','14'),
+    ('4','24'),
+    ('4','22'),
+    ('1','17'),
+    ('1','16'),
+    ('2','23'),
+    ('3','11'),
+    ('3','22'),
+    ('4','15'),
+    ('4','20');   
