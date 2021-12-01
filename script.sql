@@ -14,11 +14,12 @@ CREATE TABLE pessoa(
     );
     
 CREATE TABLE telefone_pessoa (
-    telefone VARCHAR(45) NOT NULL,
-    id_tel_pessoa INT NOT NULL,
-    PRIMARY KEY (telefone , id_tel_pessoa)
+	id_tel_pessoa INT NOT NULL,
+    telefone VARCHAR(45) NOT NULL,   
+    PRIMARY KEY (id_tel_pessoa, telefone)
      );
-    
+     
+  
 CREATE TABLE viagem (
     id_viagem INT NOT NULL AUTO_INCREMENT,
     nome VARCHAR(45) NULL,
@@ -53,16 +54,16 @@ CREATE TABLE tipo_pontos (
      
               
 CREATE TABLE telefone_ponto (
-    telefone VARCHAR(45) NOT NULL,
     id_tel_pontos INT NOT NULL,
-    PRIMARY KEY (telefone , id_tel_pontos)
+    telefone VARCHAR(45) NOT NULL,
+    PRIMARY KEY (id_tel_pontos, telefone)
      );
    
 CREATE TABLE calendario (
     id_calendario INT NOT NULL AUTO_INCREMENT,
     descricao VARCHAR(100) NULL,
-    data_inicial DATE NULL,
-    data_final DATE NULL,
+    data_inicial DATETIME NULL,
+    data_final DATETIME NULL,
     id_viagem INT NOT NULL,
     id_pontos INT NOT NULL,
     PRIMARY KEY (id_calendario)
@@ -74,7 +75,7 @@ CREATE TABLE despesa (
     link VARCHAR(100) NULL,
     email VARCHAR(100) NULL,
     local_armazenar VARCHAR(100) NULL,
-    custo DECIMAL (6,2) NULL,
+    custo DECIMAL(6,2) NULL,
     id_viagem INT NOT NULL,
     id_tipo_despesa INT NOT NULL,
     PRIMARY KEY (id_despesa)
@@ -137,5 +138,25 @@ ADD FOREIGN KEY (id_necessidade) REFERENCES necessidade(id_necessidade),
 ADD FOREIGN KEY (id_pontos) REFERENCES pontos_turisticos(id_pontos);
 
 ALTER TABLE pessoa
-ADD FOREIGN KEY (id_viagem) REFERENCES viagem(id_viagem),
+AUTO_INCREMENT=1000;
+
+ALTER TABLE viagem
+AUTO_INCREMENT=1000;
+
+ALTER TABLE local
+AUTO_INCREMENT=1000;
+
+ALTER TABLE pontos_turisticos
+AUTO_INCREMENT=1000;
+
+ALTER TABLE tipo_pontos
+AUTO_INCREMENT=1000;
+
+ALTER TABLE despesa
+AUTO_INCREMENT=1000;
+
+ALTER TABLE tipo_despesa
+AUTO_INCREMENT=1000;
+
+ALTER TABLE necessidade
 AUTO_INCREMENT=1000;
